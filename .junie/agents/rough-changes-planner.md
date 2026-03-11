@@ -66,47 +66,37 @@ _(Include this section only if there is an existing problem, bug, or regression 
 
 ### In scope
 
-Use a three-column table. Every row must be scannable in 3 seconds — short phrases, no sentences.
+Use a two-column table. Every row must be scannable in 3 seconds — short phrases, no sentences.
 
-| What                      | Problem                             | Why fix it                                  |
-| ------------------------- | ----------------------------------- | ------------------------------------------- |
-| <the thing being changed> | <what is broken or wrong right now> | <plain-English consequence if left unfixed> |
+| file(s)          | change impact                                          |
+| ---------------- | ------------------------------------------------------ |
+| <target file(s)> | <what will change and the reason the change is needed> |
 
 ### Out of scope
 
-| Item                                                                |
-| ------------------------------------------------------------------- |
-| <what this change will NOT do — be explicit to prevent scope creep> |
+List up to 3 of the most important items. Only add this section if it is contentious if a change should be included in this change.
+
+- <what this change will NOT do — be explicit to prevent scope creep>
 
 ## Rough Strategy
 
-A table of steps in priority order. Scannable in one pass — no prose.
+A table of steps in priority order. Scannable in one pass — no prose. Be detailed but concise.
 
-| #   | Step                 | One-line explanation                  |
-| --- | -------------------- | ------------------------------------- |
-| 1   | <short action label> | <why it matters — one plain sentence> |
+| file(s)          | change              | effect                               |
+| ---------------- | ------------------- | ------------------------------------ |
+| <target file(s)> | <short description> | <one-line consequence of the change> |
 
-(Aim for 3–6 rows. Cover which parts of the stack are touched. Avoid file names or implementation details.)
+(Aim for 3–8 rows. Cover which parts of the stack are touched.)
 
 ## Broad Acceptance Criteria
 
-Four columns so a tester can act on each row without reading anything else.
+Four columns so a tester can act on each row without reading anything else. Change the `#` column to numbers.
 
-| [ ] | What to verify        | Where to look                                                                      | How to test                                          |
+| #   | What to verify        | Where to look                                                                      | How to test                                          |
 | --- | --------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| [ ] | <short outcome label> | <tool or location: browser DevTools, Nuxt DevTools, Playwright test, unit test, …> | <one sentence: what to do and what result to expect> |
+| 1   | <short outcome label> | <tool or location: browser DevTools, Nuxt DevTools, Playwright test, unit test, …> | <one sentence: what to do and what result to expect> |
 
 (Aim for 3–8 rows. Every row must be actionable without reading the code.)
-
-## Open Questions / Risks
-
-Five columns — forces each risk to be fully reasoned, not just listed.
-
-| Question                                   | Why we need to answer it                       | If we get it wrong (risk)                     | Pro                              | Con                              |
-| ------------------------------------------ | ---------------------------------------------- | --------------------------------------------- | -------------------------------- | -------------------------------- |
-| <the specific unknown or decision to make> | <what breaks or stays blocked if we skip this> | <the concrete bad outcome if we decide wrong> | <upside of resolving it one way> | <downside or trade-off to watch> |
-
-(If there are none, write "None identified.")
 ```
 
 ---
@@ -117,10 +107,10 @@ Before finishing, check your output against these criteria:
 
 - **Problem** _(if present)_: Does it describe what is broken and why, from a user or business perspective? Is it present only when there is an actual problem to fix?
 - **Goal**: Does it state only the desired end outcome — not the problem, not the steps? Is it 1–2 sentences?
-- **In scope table**: Does each row have all three columns (What / Problem / Why fix it)? Can each row be understood in 3 seconds?
-- **Out of scope**: Is it explicit enough to prevent scope creep?
-- **Rough Strategy**: Is it a table with `# / Step / One-line explanation` columns? Is each row scannable in one pass? Is it high-level enough to survive detailed planning without becoming stale?
-- **Acceptance criteria**: Are they in a 4-column table (`[ ] / What to verify / Where to look / How to test`)? Can a tester act on each row without reading any code?
+- **In scope table**: Does each row have two columns (`file(s)` / `change impact`)? Can each row be understood in 3 seconds?
+- **Out of scope**: Is it a list of max 3 items? Is it present only if contentious?
+- **Rough Strategy**: Is it a table with `file(s) / change / effect` columns? Is each row scannable in one pass? Is it detailed but concise?
+- **Acceptance criteria**: Are they in a 4-column table (`# / What to verify / Where to look / How to test`)? Can a tester act on each row without reading any code?
 - **Open questions**: Is it a 5-column table (`Question / Why we need to answer it / If we get it wrong / Pro / Con`)? Does each row fully reason the risk — not just name it?
 
 Fix any issues found, then report to the invoking skill that the outline is ready.

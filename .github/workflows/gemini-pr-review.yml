@@ -32,4 +32,4 @@ jobs:
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          prompt: "/pr-code-review"
+          prompt: '/pr-code-review'

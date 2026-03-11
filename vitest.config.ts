@@ -8,15 +8,18 @@ export default defineConfig({
       {
         test: {
           name: 'unit',
-          include: ['test/unit/*.{test,spec}.ts'],
+          include: ['**/*.unit.test.ts'],
+          exclude: ['node_modules/**'],
           environment: 'node',
         },
       },
       await defineVitestProject({
         test: {
           name: 'nuxt',
-          include: ['test/nuxt/*.{test,spec}.ts'],
+          include: ['**/*.cest.test.ts'],
+          exclude: ['node_modules/**'],
           environment: 'nuxt',
+          setupFiles: ['test/nuxt/setup.ts'],
           environmentOptions: {
             nuxt: {
               rootDir: fileURLToPath(new URL('.', import.meta.url)),
@@ -25,6 +28,14 @@ export default defineConfig({
           },
         },
       }),
+      {
+        test: {
+          name: 'e2e',
+          include: ['**/*.e2e.test.ts'],
+          exclude: ['node_modules/**'],
+          environment: 'node',
+        },
+      },
     ],
     coverage: {
       enabled: true,

@@ -1,12 +1,8 @@
 <template>
   <div>
     <h3>Counter: {{ count }}</h3>
-    <button @click="increment">
-      Increment
-    </button>
-    <button @click="decrement">
-      Decrement
-    </button>
+    <button @click="increment">Increment</button>
+    <button @click="decrement">Decrement</button>
   </div>
 </template>
 

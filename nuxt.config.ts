@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@nuxtjs/i18n',
   ],
+  i18n: {
+    defaultLocale: 'en',
+  },
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
 })

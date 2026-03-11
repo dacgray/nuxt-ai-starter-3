@@ -22,7 +22,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "type:check": "nuxt typecheck",
-    "ci:all": "npm run pretty:check && npm run type:check && npm run lint && npm run test:unit && npm run test:nuxt && npm run test:e2e"
+    "ci:all": "npm run pretty:check && npm run type:check && npm run lint && npm run test:unit && npm run test:nuxt && npm run test:e2e",
+    "rs:generate": "rulesync generate"
   },
   "dependencies": {
     "@nuxt/content": "^3.12.0",
@@ -40,6 +41,7 @@
     "@vue/test-utils": "^2.4.6",
     "happy-dom": "^20.8.3",
     "prettier": "^3.8.1",
+    "rulesync": "^7.18.1",
     "vitest": "^4.0.18",
     "vue-tsc": "^3.2.5"
   }

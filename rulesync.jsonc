@@ -1,10 +1,6 @@
 {
   "$schema": "https://github.com/dyoshikawa/rulesync/releases/latest/download/config-schema.json",
-  "targets": [
-    "junie",
-    "claudecode",
-    "geminicli"
-  ],
+  "targets": ["junie", "claudecode", "geminicli"],
   "features": [
     "rules",
     "ignore",
@@ -12,16 +8,14 @@
     "commands",
     "subagents",
     "skills",
-    "hooks"
+    "hooks",
   ],
-  "baseDirs": [
-    "."
-  ],
+  "baseDirs": ["."],
   "delete": true,
   "verbose": false,
   "silent": false,
   "global": false,
   "simulateCommands": false,
   "simulateSubagents": false,
-  "simulateSkills": false
+  "simulateSkills": false,
 }
